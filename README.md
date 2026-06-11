@@ -92,19 +92,7 @@
 Блок‑схема (текстовое описание)
 text
 
-                    [ Приложение / API Gateway ]
-                              |
-                (маршрутизация запросов по типу таблиц и ключу шарда)
-                              |
-        +---------------------+--------------------+-------------------+
-        |                     |                    |                   |
-   (users)                 (stores)            (books)            (books)
-        |                     |                    |                   |
-   Server A (Master)      Server B (Master)    Server C1 (Master)   Server C2 (Master)  ... C3
-        |                     |                    |                   |
-   Server A_slave          (реплики при       Server C1_slave       Server C2_slave
-        |                   необходимости)          |                    |
-   (репликация)                                   (репликация)        (репликация)
+<img width="1094" height="429" alt="изображение" src="https://github.com/user-attachments/assets/0f4bf5bf-52a2-4e77-a6bc-a3a303aaf74a" />
 
 Принцип разграничения:
 
